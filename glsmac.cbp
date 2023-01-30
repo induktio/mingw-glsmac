@@ -31,7 +31,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-std=c++17 -march=i686 -mtune=generic -Wall -Wextra" />
-			<Add option="-Wno-switch -Wno-ignored-qualifiers -Wno-unused-parameter" />
+			<Add option="-Wno-pointer-arith -Wno-switch -Wno-ignored-qualifiers -Wno-unused-parameter" />
 			<Add directory="src/" />
 		</Compiler>
 		<Linker>
@@ -166,6 +166,8 @@
 		<Unit filename="src/game/world/map/Tiles.cpp" />
 		<Unit filename="src/game/world/map/Tiles.h" />
 		<Unit filename="src/game/world/map_generator/MapGenerator.h" />
+		<Unit filename="src/game/world/map_generator/SimplePerlin.cpp" />
+		<Unit filename="src/game/world/map_generator/SimplePerlin.h" />
 		<Unit filename="src/game/world/map_generator/SimpleRandom.cpp" />
 		<Unit filename="src/game/world/map_generator/SimpleRandom.h" />
 		<Unit filename="src/game/world/map_generator/Test.cpp" />
@@ -334,6 +336,8 @@
 		<Unit filename="src/ui/theme/Theme.cpp" />
 		<Unit filename="src/ui/theme/Theme.h" />
 		<Unit filename="src/util/Clamper.h" />
+		<Unit filename="src/util/Perlin.cpp" />
+		<Unit filename="src/util/Perlin.h" />
 		<Unit filename="src/util/SMACChecker.cpp" />
 		<Unit filename="src/util/SMACChecker.h" />
 		<Unit filename="src/util/System.cpp" />

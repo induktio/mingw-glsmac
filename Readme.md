@@ -1,8 +1,17 @@
 
 ## Compiler environment
 
+In addition to CodeBlocks, MinGW-w64 with threading support needs to be installed separately. Do not use the default MinGW that is shipped with CodeBlocks.
+This guide assumes using the 32 bit MinGW-w64 version for the builds. It is also easier to use Git Bash environment for command line tasks.
+It is recommended to use the default "GNU GCC compiler" profile in CodeBlocks for this since `glsmac.cbp` project file also assumes using this compiler for the project.
+
+After extracting the files, MinGW-w64 toolkit paths and filenames have to be entered in CodeBlocks config in Settings > Compiler.
+This can be configured by adjusting the filenames in Toolchain Executables tab. If using the 64 bit MinGW version, some filenames may slightly change,
+and you might also have to manually adjust the linked libraries from `glsmac.cbp` project file.
+
 * [CodeBlocks](https://www.codeblocks.org/downloads/binaries/)
-* [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/8.1.0/threads-posix/dwarf/i686-8.1.0-release-posix-dwarf-rt_v6-rev0.7z)
+* [MinGW 32 bit](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/8.1.0/threads-posix/dwarf/i686-8.1.0-release-posix-dwarf-rt_v6-rev0.7z)
+* [MinGW 64 bit](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z)
 
 
 ## Library sources
@@ -10,13 +19,14 @@
 * [SDL](https://github.com/libsdl-org/SDL/releases/download/release-2.26.2/SDL2-devel-2.26.2-mingw.zip)
 * [SDL_image](https://github.com/libsdl-org/SDL_image/releases/download/release-2.6.2/SDL2_image-devel-2.6.2-mingw.zip)
 * [Freetype](https://download.savannah.gnu.org/releases/freetype/ft2121.zip)
-* [Freeglut](https://www.transmissionzero.co.uk/files/software/development/GLUT/freeglut-MinGW-3.0.0-1.mp.zip)
+* [Freeglut](files/freeglut-MinGW-3.0.0-1.mp.zip)
 * [Glew](https://github.com/nigels-com/glew/releases/download/glew-2.2.0/glew-2.2.0.zip)
 
 
 ## Install libraries
 
-After compiling, these extra files should be extracted to the main MinGW i686 folder (these paths are relative to the destination).
+With the exception of Freeglut, these libraries need to be separately compiled using the MinGW-w64 environment that was configured previously.
+After compiling, these extra files should be extracted to the main MinGW i686 or x86_64 folder (these paths are relative to the destination).
 
     include/GL/eglew.h
     include/GL/freeglut.h
@@ -225,3 +235,10 @@ After compiling, these extra files should be extracted to the main MinGW i686 fo
     lib/libglew32.dll.a
     lib/libglew32mx.a
     lib/libglew32mx.dll.a
+
+
+## Compile glsmac project
+
+After the dependencies are installed, copy `glsmac.cbp` project file to the glsmac project folder and recursively add all files from `src`
+to the project in case the cbp project file is missing something. The project should now compile from CodeBlocks interface.
+
