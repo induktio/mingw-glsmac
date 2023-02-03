@@ -246,6 +246,8 @@
 		<Unit filename="src/scene/Camera.h" />
 		<Unit filename="src/scene/Entity.cpp" />
 		<Unit filename="src/scene/Entity.h" />
+		<Unit filename="src/scene/Light.cpp" />
+		<Unit filename="src/scene/Light.h" />
 		<Unit filename="src/scene/Scene.cpp" />
 		<Unit filename="src/scene/Scene.h" />
 		<Unit filename="src/scene/actor/Actor.cpp" />
@@ -258,10 +260,6 @@
 		<Unit filename="src/scene/actor/Sound.h" />
 		<Unit filename="src/scene/actor/Text.cpp" />
 		<Unit filename="src/scene/actor/Text.h" />
-		<Unit filename="src/scene/mesh/Mesh.cpp" />
-		<Unit filename="src/scene/mesh/Mesh.h" />
-		<Unit filename="src/scene/mesh/Rectangle.cpp" />
-		<Unit filename="src/scene/mesh/Rectangle.h" />
 		<Unit filename="src/scheduler/Scheduler.h" />
 		<Unit filename="src/scheduler/Simple.cpp" />
 		<Unit filename="src/scheduler/Simple.h" />
@@ -274,6 +272,8 @@
 		<Unit filename="src/types/Font.h" />
 		<Unit filename="src/types/Matrix44.cpp" />
 		<Unit filename="src/types/Matrix44.h" />
+		<Unit filename="src/types/Mesh.cpp" />
+		<Unit filename="src/types/Mesh.h" />
 		<Unit filename="src/types/Packet.cpp" />
 		<Unit filename="src/types/Packet.h" />
 		<Unit filename="src/types/Serializable.h" />
@@ -289,6 +289,8 @@
 		<Unit filename="src/types/Vec3.h" />
 		<Unit filename="src/types/Vec4.cpp" />
 		<Unit filename="src/types/Vec4.h" />
+		<Unit filename="src/types/mesh/Rectangle.cpp" />
+		<Unit filename="src/types/mesh/Rectangle.h" />
 		<Unit filename="src/ui/Default.h" />
 		<Unit filename="src/ui/UI.cpp" />
 		<Unit filename="src/ui/UI.h" />
@@ -336,6 +338,8 @@
 		<Unit filename="src/ui/theme/Theme.cpp" />
 		<Unit filename="src/ui/theme/Theme.h" />
 		<Unit filename="src/util/Clamper.h" />
+		<Unit filename="src/util/Math.cpp" />
+		<Unit filename="src/util/Math.h" />
 		<Unit filename="src/util/Perlin.cpp" />
 		<Unit filename="src/util/Perlin.h" />
 		<Unit filename="src/util/SMACChecker.cpp" />
